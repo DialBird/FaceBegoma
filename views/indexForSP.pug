@@ -1,0 +1,15 @@
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=360,initial-scale=1")
+		title スマホ画面
+		script(src="https://code.jquery.com/jquery-3.0.0.min.js")
+	body
+		h2 写真を撮るの？
+		input(type="file" accept="image/*;capture=camera") 
+	script.
+		// スクロール禁止
+		 $(window).on('touchmove.noScroll', function(e){
+		     e.preventDefault();
+		 });
+	script(src="./build/js/mainForSP.js")
