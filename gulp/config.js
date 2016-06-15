@@ -14,29 +14,28 @@ module.exports = {
     },
     webpack: {
         entry: {
-            bundle: `${originSourceDir}/js/mainForSP.js`,
-            test: `${originSourceDir}/js/test.js`
+            mainForPC: `${originSourceDir}/js/mainForPC.js`,
+            mainForSP: `${originSourceDir}/js/mainForSP.js`
         },
         output: {
             path: __dirname,
             filename: "[name].js"
-        }
-    },
-    externals: {
-        "createjs": "createjs",
-        "TweenLite": "TweenLite",
-        "socket": "io"
-    },
-    resolve: {
-        //requireするときに拡張子を省くことができるようになる。
-        extensions: ['','.js']
-    },
-    module: {
-        loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loaders: ['babel', 'eslint-loader'] }
-        ]
-    },
-    eslint:{
-        configFile: './.eslintrc'
+        },
+		externals: {
+			"jquery": "$"
+		},
+		resolve: {
+			//requireするときに拡張子を省くことができるようになる。
+			extensions: ['','.js', '.jsx']
+		},
+		module: {
+			loaders: [
+				{ test: /\.js$/, exclude: /node_modules/, loaders: ['babel', 'eslint-loader']},
+				{ test: /\.jsx$/, exclude: /node_modules/, loaders: ['babel', 'eslint-loader']}
+			]
+		},
+		eslint:{
+			configFile: './.eslintrc'
+		}
     }
 };
