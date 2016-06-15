@@ -1,5 +1,14 @@
 html
-    head
-        title PC画面
-    body
-        h1= title
+	head
+		title PC画面
+		link(rel="stylesheet", href="./css/mainForPC.css", type="text/css")
+		script(src="https://code.jquery.com/jquery-3.0.0.min.js")
+		script(src="./lib/js/jquery.qrcode.min.js")
+	body
+		div#content
+		h1 title
+		div#QRCode
+		canvas#myCanvas
+		script(src="./build/js/mainForPC.js")
+		script.
+			$('#QRCode').qrcode('http://192.168.179.2:3000/smartphone');

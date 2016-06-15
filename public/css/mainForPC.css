@@ -1,0 +1,19 @@
+
+
+#QRCode{
+	position: absolute;
+	top:100px;
+	right:100px;
+}
+#QRCode>canvas{
+	width: 100px;	
+	height: 100px;	
+}
+
+#myCanvas{
+	display: block;
+	margin: 0 auto;
+	width: 800px;
+	height: 500px;
+	border:solid 1px;
+}
