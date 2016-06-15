@@ -20421,14 +20421,6 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				var manipulateComponent = '';
-				if (this.state.nowState === 1) {
-					manipulateComponent = React.createElement(
-						'button',
-						{ id: 'okBtn', onClick: this.onClick.bind(this) },
-						'OK'
-					);
-				}
 				return React.createElement(
 					'div',
 					null,
@@ -20515,7 +20507,7 @@
 		return ManipulationComponent;
 	}(React.Component);
 
-	ReactDOM.render(React.createElement(Content, { state: '1' }), document.getElementById('content'));
+	ReactDOM.render(React.createElement(Content, null), document.getElementById('content'));
 
 /***/ }
 /******/ ]);

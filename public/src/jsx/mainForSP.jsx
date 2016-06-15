@@ -17,10 +17,6 @@ class Content extends React.Component {
 		this.setState({nowState: 2});
 	}
 	render(){
-		let manipulateComponent = '';
-		if (this.state.nowState === 1) {
-			manipulateComponent = <button id="okBtn" onClick={this.onClick.bind(this)}>OK</button>;
-		}
 		return (
 			<div>
 				<IntroMsg nowState={this.state.nowState}/>
@@ -84,7 +80,7 @@ class ManipulationComponent extends React.Component {
 
 
 ReactDOM.render(
-	<Content state="1"/>,
+	<Content/>,
 	document.getElementById('content')
 );
 
