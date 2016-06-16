@@ -9,7 +9,6 @@ body{
 h3{
 	box-sizing: border-box;
 	display:block;
-	margin: 0 auto;
 	padding:0;
 	text-align:center;
 }
@@ -25,16 +24,27 @@ input#cameraBtn {
 
 #faceCanvas {
 	display:block;
-	margin: 0 auto;
 	border: solid 1px;
 }
 
 #okBtn {
 	display:block;
-	margin:0 auto;
 	width:100px;
 	height:50px;
 	font-size: 20px;
+}
+
+#swipeZone {
+	display:block;
+	background:yellow;
+	width:80%;
+	height:80px;
+}
+
+
+.m0auto {
+	display:block;
+	margin:0 auto;
 }
 
 .mb25 {

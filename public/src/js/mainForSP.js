@@ -34,7 +34,7 @@ function selectReadfile(e){
 	const file = e.target.files;
 	const reader = new FileReader();
 	reader.readAsDataURL(file[0]);
-	reader.onload = function(){
+	reader.onload = ()=>{
 		readDrawImg(reader, canvas, 0, 0);	
 	};
 }
@@ -43,7 +43,7 @@ function readDrawImg(reader, canvas, x, y){
 	const resultDataUrl = reader.result;
 	const img = new Image();
 	img.src = resultDataUrl;
-	img.onload = function(){
+	img.onload = ()=>{
 		const imgRatio = img.width / img.height;
 		const w = 200;
 		const h = 200 * imgRatio;
